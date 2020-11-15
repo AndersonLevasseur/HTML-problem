@@ -8,3 +8,8 @@ let showFreddie = (ev) => {
 }
 document.getElementById("showFreddie").addEventListener("click", showFreddie);
 //note how you could just combine the above into one big blob
+
+
+// Calculator
+
+// ALLCALCULATORSTUFHERE
