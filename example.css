@@ -48,7 +48,7 @@ body {
 /* Change color on hover */
 .navbar a:hover {
   background-color: #ddd;
-  color: black;
+  color: rgb(0, 0, 0);
 }
 
 /* Active/current link */
@@ -95,6 +95,50 @@ body {
   padding: 20px;
   text-align: center;
   background: #ddd;
+}
+
+.calcOutline {
+  height: 85%;
+  max-height: 450px;
+  min-height: 225px;
+  width: 27.8%;
+  max-width: 250px;
+  min-width: 125px;
+  background-color: grey;
+  margin: 1.1% 36.1%;
+  font-size: 10px;
+  display: grid;
+  grid-gap: 1px;
+  grid-template-rows: 10em 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.calcDisplay {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row: 1;
+  background-color: rgba(0, 0, 0, 0.637);
+  font-size: 70px;
+  color: rgb(255, 255, 255);
+  text-align: right;
+  padding: 5%;
+  opacity: 1;
+}
+
+.calcKeys {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 7;
+  background-color: cornflowerblue;
+  opacity: 0;
+}
+
+.button {
+  background-color: cornsilk;
+  color: cornsilk;
+  font-size: 10px;
+  padding: 1px 20% 1px;
 }
 
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
