@@ -1,13 +1,10 @@
 // Calculator
-
-// ALLCALCULATORSTUFHERE
-let currentValue
-let number = function(number) {
-	return currentValue = number
+let display = document.getElementById("display");
+let buttons = document.getElementsByTagName("button");
+let buttonHandler = function(element) {
+	display.innerHTML = display.innerHTML.concat(element.dataset.value); 
 }
-let numberOperator = function() {
 
-}
-let equals = function() {
-	return currentValue
+for(let button of buttons) {
+	button.addEventListener("click", buttonHandler);
 }
