@@ -154,7 +154,11 @@ body {
 
 
 .button:hover, .buttonEquals:hover {
-  background-color: #1abc9c;
+  background-color: #999999;
+}
+
+.button:active, .buttonEquals:active {
+  background-color: #f1f1f1;
 }
 
 
