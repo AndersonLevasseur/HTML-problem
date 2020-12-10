@@ -2,15 +2,21 @@
 let display = document.getElementById("display");
 let buttons = document.getElementsByTagName("button");
 
-let buttonHandler = function(element) {
-	display.in1nerHTML = display.innerHTML.concat(element.dataset.value, display.innerHTML); 
+let buttonHandler = function(event) {
+	if (event.srcElement.dataset.value === undefined) {
+		display.innerHTML = display.innerHTML.concat(event.srcElement.dataset.function); 
+	} else {
+		display.innerHTML = display.innerHTML.concat(event.srcElement.dataset.value); 
+	}
 }
 
 for(let button of buttons) {
-	button.addEventListener("click", buttonHandler, false);
+	button.addEventListener("click", buttonHandler);
 }
+const Calculator = require("./2020.11.05 - objects.problem.calculator.js")
 
-console.log(buttons.dataset.value)
+
+// console.log(buttons.dataset.value);
 
 /* 
 let display = document.getElementById("display");
