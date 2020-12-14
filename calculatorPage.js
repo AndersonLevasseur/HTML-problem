@@ -4,18 +4,50 @@ let buttons = document.getElementsByTagName("button");
 
 let buttonHandler = function(event) {
 	if (event.srcElement.dataset.value === undefined) {
-		display.innerHTML = display.innerHTML.concat(event.srcElement.dataset.function); 
+		if (event.srcElement.dataset.clear === undefined) {
+			operationHandler(event.srcElement.dataset.operation);
+		} else if (event.srcElement.dataset.clear === "c") {
+			// calc.reset
+		} else {
+			display.innerHTML = "NAN";
+		}
 	} else {
 		display.innerHTML = display.innerHTML.concat(event.srcElement.dataset.value); 
+	}
+}
+ 
+
+let operationHandler = function(element) {
+	switch (element) {
+		case "+":
+			// calc.add;
+			break;
+		case "-":
+			// calc.subtract
+			break;
+		case "*":
+			// calc.multiply;
+			break;
+		case "/":
+			// calc.divide;
+			break;
+		case ".":
+			// calc.addDecimal;
+			break;
 	}
 }
 
 for(let button of buttons) {
 	button.addEventListener("click", buttonHandler);
 }
-const Calculator = require("./2020.11.05 - objects.problem.calculator.js")
 
+// for(let button of buttons) {
+// 	button.addEventListener("click", clearHandler);
+// }
 
+// for(let button of buttons) {
+// 	button.addEventListener("click", operationHandler);
+// }
 // console.log(buttons.dataset.value);
 
 /* 

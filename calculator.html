@@ -7,6 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="example.css">
 	<script src="./calculatorPage.js" defer="defer"></script>
+	<script src="calculator.js" defer="defer"></script>
 </head>
 
 <body>
@@ -29,16 +30,16 @@
 			
 		</div>
 	  <div class="calcKeys">
-		<button class="button" data-function="+">
+		<button class="button" data-operation="+">
 			+
 		</button>
-		<button class="button" data-function="-">
+		<button class="button" data-operation="-">
 			-
 		</button>
-		<button class="button" data-function="*">
+		<button class="button" data-operation="*">
 			*
 		</button>
-		<button class="button" data-function="/">
+		<button class="button" data-operation="/">
 			/
 		</button>
 		<button class="button" data-value="7">
@@ -50,7 +51,7 @@
 		<button class="button" data-value="9">
 			9
 		</button>
-		<button class="buttonEquals" data-function="=">
+		<button class="buttonEquals" data-operation="=">
 			=
 		</button>
 	  	<button class="button" data-value="4">
@@ -71,7 +72,7 @@
 		<button class="button" data-value="3">
 			3
 		</button>
-		<button class="button" data-function="c">
+		<button class="button" data-clear="c">
 			c
 		</button>
 		<button class="button" data-value="0">
