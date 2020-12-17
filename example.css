@@ -152,16 +152,23 @@ body {
 .buttonEquals {
   background-color: rgb(90, 90, 90);
   grid-column: 4;
-  grid-row-start: 2;
+  grid-row-start: 3;
   grid-row-end: 6;
 }
 
+.buttonUndo {
+  background-color: rgb(90, 90, 90);
+  color: black;
+  font-size: 12px;
+  padding: 1px 5px 1px;
+  margin: 0px 0px 0px;
+}
 
-.button:hover, .buttonEquals:hover {
+.button:hover, .buttonEquals:hover, .buttonUndo:hover{
   background-color: #999999;
 }
 
-.button:active, .buttonEquals:active {
+.button:active, .buttonEquals:active, .buttonUndo:active {
   background-color: #f1f1f1;
 }
 
