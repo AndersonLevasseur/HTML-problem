@@ -1,42 +1,35 @@
-// Calculator
+let calc = new Calculator();
 let display = document.getElementById("display");
 let buttons = document.getElementsByTagName("button");
 
 let buttonHandler = function(event) {
+	// if it's not a number, check if it's a clear, see if it's an operation, 
 	if (event.srcElement.dataset.value === undefined) {
-		if (event.srcElement.dataset.clear === undefined) {
-			operationHandler(event.srcElement.dataset.operation);
-		} else if (event.srcElement.dataset.clear === "c") {
-			// calc.reset
-		} else {
-			display.innerHTML = "NAN";
+		// If it's a clear 
+		if (event.srcElement.dataset.clear === "c") {
+			calc.reset();
+			display.innerText = calc.runningTotal;
+		// If it's an operation
+		} else if (event.srcElement.dataset.operation) {
+			calc.executeOperation(event.srcElement.dataset.operation); 
+			display.innerText = calc.runningTotal;
+		// If it's an Undo
+		} else if (event.srcElement.dataset.undo) {
+			// Not completed in calculator.js 
+			calc.undoValue();
+			display.innerText = calc.workingValue
+		} 
+		// If it's unexpected
+		else {
+			throw "Unexpected input";
 		}
+	// If it is a number
 	} else {
-		display.innerHTML = display.innerHTML.concat(event.srcElement.dataset.value); 
+		calc.inputValue(event.srcElement.dataset.value);
+		display.innerText = calc.workingValue;
 	}
 }
  
-
-let operationHandler = function(element) {
-	switch (element) {
-		case "+":
-			// calc.add;
-			break;
-		case "-":
-			// calc.subtract
-			break;
-		case "*":
-			// calc.multiply;
-			break;
-		case "/":
-			// calc.divide;
-			break;
-		case ".":
-			// calc.addDecimal;
-			break;
-	}
-}
-
 for(let button of buttons) {
 	button.addEventListener("click", buttonHandler);
 }
